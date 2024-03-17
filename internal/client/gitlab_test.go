@@ -34,13 +34,13 @@ func TestGitLabReleaseURLTemplate(t *testing.T) {
 			name:            "default_download_url",
 			downloadURL:     DefaultGitLabDownloadURL,
 			repo:            repo,
-			wantDownloadURL: "https://gitlab.com/owner/name/-/releases/{{ .Tag }}/downloads/{{ .ArtifactName }}",
+			wantDownloadURL: "http://192.168.31.188:81/owner/name/-/releases/{{ .Tag }}/downloads/{{ .ArtifactName }}",
 		},
 		{
 			name:            "default_download_url_no_owner",
 			downloadURL:     DefaultGitLabDownloadURL,
 			repo:            config.Repo{Name: "name"},
-			wantDownloadURL: "https://gitlab.com/name/-/releases/{{ .Tag }}/downloads/{{ .ArtifactName }}",
+			wantDownloadURL: "http://192.168.31.188:81/name/-/releases/{{ .Tag }}/downloads/{{ .ArtifactName }}",
 		},
 		{
 			name:            "download_url_template",
