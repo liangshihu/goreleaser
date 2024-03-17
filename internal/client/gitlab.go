@@ -16,7 +16,7 @@ import (
 	"github.com/xanzy/go-gitlab"
 )
 
-const DefaultGitLabDownloadURL = "https://gitlab.com"
+const DefaultGitLabDownloadURL = "http://192.168.31.188:81"
 
 type gitlabClient struct {
 	client *gitlab.Client
